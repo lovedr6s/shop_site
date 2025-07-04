@@ -2,10 +2,17 @@
 
 {% block content %}
 {% if items %}
-<ul>
-    {% for item in items %}
-    <li>{{ item.title }} <img src="{{ item.image.url }}" alt="subay"> {{ item.price }}</li>
-    {% endfor %}
-</ul>
+    <section class="product-grid">
+        {% for item in items %}
+            <div class="product">
+                <h2><a href="{% url 'shoes_detail' item.id %}">{{ item.title }}!!</a></h2>
+                <img src="{{ item.image.url }}">
+                <p>Цена: {{ item.price }}</p>
+                <div style="text-align: right;">
+                    <button name="buy">Купить</button>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
 {% endif %}
 {% endblock %}

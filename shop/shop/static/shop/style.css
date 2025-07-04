@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+  font-family: sans-serif;
+  background: #f9f9f9;
+}
 /* LOGO */
 .logo {
     text-align: center;
@@ -10,21 +15,15 @@
 
 /* ---- */
 
-/* BODY */
-
-.body {
-    margin-left: 200px;
-    margin-right: 200px;
-    width: 500px;
-    height: 500px;
-    background-color: black;
+/* MENU */
+.menu {
+    background: #222;
+    padding: 1rem;
 }
 
-/* ---- */
-
-/* MENU */
 .menu ul {
     display: flex;
+    justify-content: space-around;
     list-style: none;
 }
 
@@ -34,8 +33,92 @@
 
 .menu a {
     text-decoration: none;
-    color: black;
+    color: #ffffff;
 }
 
 
 /* ---- */
+
+/* container */
+
+.container {
+  max-width: 1000px;  /* чтобы не было шире 1000px */
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* ---- */
+
+/* PRODUCT SHIT*/
+
+.product-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.product {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.product button {
+  padding: 0.5rem 1rem;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product button {
+  display: inline-block;
+  margin-left: auto;
+  text-align: right;
+}
+
+@media (min-width: 600px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ПК: 3 в ряд */
+@media (min-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ---- */
+
+/* footer */
+footer {
+  background: #222;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+/* ----- */
+
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100vh;           /* тянем всю высоту окна */
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;                      /* основной контент занимает всё место, а футер снизу */
+}
