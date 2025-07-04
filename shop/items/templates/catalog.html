@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if items %}
+<ul>
+    {% for item in items %}
+    <li>{{ item.title }} <img src="{{ item.image.url }}" alt="subay"> {{ item.price }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}

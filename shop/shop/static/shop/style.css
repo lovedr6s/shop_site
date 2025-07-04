@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* LOGO */
+.logo {
+    text-align: center;
+    margin: 20px;
+}
+
+/* ---- */
+
+/* BODY */
+
+.body {
+    margin-left: 200px;
+    margin-right: 200px;
+    width: 500px;
+    height: 500px;
+    background-color: black;
+}
+
+/* ---- */
+
+/* MENU */
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li {
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* ---- */

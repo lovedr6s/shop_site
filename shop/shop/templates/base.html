@@ -1,0 +1,27 @@
+{% load static %}
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'shop/style.css' %}">
+        <title>LuvShop</title>
+    </head>
+    <body>
+        <div class="logo">
+            <h1>LuvShop</h1>
+        </div>
+        <div class="body">
+            <div class="menu">
+                <ul>
+                    <li><a href="{% url 'home' %}">Главная</a></li>
+                    <li><a href="{% url 'shoes_catalog' %}">Кроссовки</a></li>
+                    <li><a href="#">Бренд</a></li>
+                    <li><a href="#">О нас</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </body>
+</html>
