@@ -7,20 +7,15 @@ body {
   font-family: sans-serif;
   background: #f9f9f9;
 }
+
 /* LOGO */
 .logo {
     text-align: center;
     margin: 20px;
 }
-
 /* ---- */
 
 /* MENU */
-.menu {
-    background: #222;
-    padding: 1rem;
-}
-
 .menu ul {
     display: flex;
     justify-content: space-around;
@@ -35,22 +30,25 @@ body {
     text-decoration: none;
     color: #ffffff;
 }
-
-
 /* ---- */
 
 /* container */
+.menu_container {
+  background: #222;
+  max-width: 1000px;  /* чтобы не было шире 1000px */
+  margin: auto;
+  padding: 1rem;
+}
 
 .container {
   max-width: 1000px;  /* чтобы не было шире 1000px */
   margin: 2rem auto;
   padding: 0 1rem;
+  flex: 1; 
 }
-
 /* ---- */
 
 /* PRODUCT SHIT*/
-
 .product-grid {
   display: grid;
   gap: 1rem;
@@ -91,7 +89,6 @@ body {
   }
 }
 
-/* ПК: 3 в ряд */
 @media (min-width: 900px) {
   .product-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -109,16 +106,8 @@ footer {
 }
 /* ----- */
 
-html, body {
-  height: 100%;
-}
-
 .wrapper {
-  min-height: 100vh;           /* тянем всю высоту окна */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-.container {
-  flex: 1;                      /* основной контент занимает всё место, а футер снизу */
 }
